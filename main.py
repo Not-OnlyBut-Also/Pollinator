@@ -29,46 +29,6 @@ class Game:
             self.current.kill()
         self.state = state
         self.current = self.states[self.state](self)
-    def run(self):
-        self.set_state("menu")
-        while self.running:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.running = False
-                elif event.type == pygame.KEYDOWN:
-                    if self.state == "leaderboard":
-                        if event.key == pygame.K_RETURN:
-                            self.set_state("menu")
-                    elif self.state == "credits":
-                        if event.key == pygame.K_RETURN:
-                            self.set_state("menu")
-                    elif self.state == "menu":
-                        if event.key == pygame.K_RETURN:
-                            self.set_state("music select")
-                        elif event.key == pygame.K_l:
-                            self.set_state("leaderboard")
-                        elif event.key == pygame.K_c:
-                            self.set_state("credits")
-                    elif self.state == "music select":
-                        if event.key == pygame.K_RETURN:
-                            self.set_state("instructions")
-                    elif self.state == "instructions":
-                        if event.key == pygame.K_RETURN:
-                            constant.SFX_CHANNEL.play(constant.SELECT_SOUND)
-                            self.set_state("game")
-                    elif self.state == "game":
-                        if event.key == pygame.K_r and self.current.paused == True:
-                            self.set_state("game")
-                        elif event.key == pygame.K_m and self.current.paused == True:
-                            self.set_state("menu")
-                    elif self.state == "score":
-                        if event.key == pygame.K_RETURN and self.current.leaderboard.current_slot == None:
-                            self.set_state("menu")
-            self.screen.fill(constant.BG)
-            self.current.update()
-            pygame.display.update()
-            self.clock.tick(constant.FPS)
-        pygame.quit()
 
 async def main():
     game = Game()

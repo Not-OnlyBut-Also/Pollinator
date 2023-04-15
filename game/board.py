@@ -90,9 +90,9 @@ class Board:
     def lose(self):
         if self.player.health == 0:
             if self.frames_lost == 0:
+                text.Text((constant.SCREEN_SIZE[0] / 2, constant.SCREEN_SIZE[1] / 2), "Game Over")
                 constant.MUSIC_CHANNEL.play(constant.GAME_OVER_SOUND)
             self.frames_lost += 1
-            text.Text((constant.SCREEN_SIZE[0] / 2, constant.SCREEN_SIZE[1] / 2), "Game Over")
             if self.frames_lost % (constant.FPS * 4) == 0:
                 self.game.scores = {
                     "min" : self.UI.time_min,

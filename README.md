@@ -1,10 +1,14 @@
 # Pollinator
 Pygame platformer made for the Pygame Community Easter Jam 2023
 
+## How to play
+**If you have python and pygame installed:**
+  On Github, click the "Code" button.
+  Click "Download ZIP."
+  Unzip the downloaded files.
+  In a terminal, type "python3 main.py" and hit enter.
 
-CONTROLS:
+
+## Controls
 Space to jump
 Arrow keys to move
-
-DIRECTIONS:
-Jump on flowers to earn points. But be careful, jumping on flowers will also release pollen and attract bees. If you stand in a swarm of bees for too long you'll get stung!

@@ -71,7 +71,7 @@ def init():
     POLLINATE_SOUND = pygame.mixer.Sound(SOUND_PATH + "pollinate" + SOUND_EXT)
     COMBO_SOUND = [pygame.mixer.Sound(SOUND_PATH + f"combo{num + 1}" + SOUND_EXT) for num in range(5)]
     BUZZ_SOUND = pygame.mixer.Sound(SOUND_PATH + "buzz" + SOUND_EXT)
-    GAME_OVER_SOUND = pygame.mixer.Sound(SOUND_PATH + "pollinate" + SOUND_EXT)
+    GAME_OVER_SOUND = pygame.mixer.Sound(SOUND_PATH + "game_over" + SOUND_EXT)
     PAUSE_SOUND = pygame.mixer.Sound(SOUND_PATH + "pause" + SOUND_EXT)
     BLIP_SOUND = pygame.mixer.Sound(SOUND_PATH + "blip" + SOUND_EXT)
     SELECT_SOUND = pygame.mixer.Sound(SOUND_PATH + "select" + SOUND_EXT)
