@@ -1,5 +1,3 @@
-import os
-
 TITLE = "POLLINATOR"
 SCREEN_SIZE = (768, 768)
 BG = "#000000"
